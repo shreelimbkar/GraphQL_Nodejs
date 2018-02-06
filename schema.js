@@ -5,12 +5,11 @@ type Cat {
     name: String!
 }
 
-type query {
+type Query {
     allCats: [Cat!]!
 }
 
-type Mutation: {
+type Mutation {
     createCat(name: String!): Cat!
 }
-
 `
