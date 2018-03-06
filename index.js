@@ -29,4 +29,8 @@ app.use('/graphql', bodyParser.json(), graphqlExpress({ schema, context: { Cat }
 
 app.use('/graphiql', graphiqlExpress({ endpointURL: '/graphql' }));
 
+app.use('/', (req, res) => {
+    res.send('This is GraphQL example.');
+});
+
 app.listen(PORT);
